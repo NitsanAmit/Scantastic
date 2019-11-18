@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CropActivity"
+    android:background="#ffffff"
+    android:layoutDirection="ltr"
+    >
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_above="@id/seekbar_contrast"
+        >
+        <FrameLayout
+            android:id="@+id/holderImageCrop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="16dp">
+
+            <ImageView
+                android:id="@+id/img_crop"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true" />
+
+        </FrameLayout>
+        <com.namit.scantastic.models.PolygonView
+            android:id="@+id/polygon_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+    </FrameLayout>
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/seekbar_contrast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:progressBackgroundTint="@color/colorAccent"
+        android:thumbTint="@color/colorAccent"
+        android:layout_margin="16dp"
+        android:layout_above="@id/seekbar_brightness"
+        android:max="100"
+        />
+        <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/seekbar_brightness"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:progressBackgroundTint="@color/colorAccent"
+        android:thumbTint="@color/colorAccent"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="16dp"
+            android:layout_above="@id/seekbar_saturation"
+        android:max="100"
+        />
+
+        <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/seekbar_saturation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:progressBackgroundTint="@color/colorAccent"
+        android:thumbTint="@color/colorAccent"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="70dp"
+        android:layout_alignParentBottom="true"
+        android:max="100"
+        />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layoutDirection="ltr"
+        >
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottom_app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_gravity="bottom"
+            app:backgroundTint="#FFD54F"
+            app:fabAlignmentMode="center"
+            app:fabCradleMargin="10dp"
+            app:fabCradleVerticalOffset="0dp"
+            app:fabCradleRoundedCornerRadius="50dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                >
+                    <ImageButton
+                        android:id="@+id/nav_done"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_done"
+                        android:background="@null"
+                        android:layout_gravity="center"
+                        />
+
+            </LinearLayout>
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</RelativeLayout>

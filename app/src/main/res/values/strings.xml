@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Scantastic</string>
+    <string name="txt_title">Title:%s</string>
+    <string name="txt_date">Date: %s</string>
+    <string name="txt_topic">Topic: %s</string>
+    <string name="txt_doc">Doc %d</string>
+    <string name="instructions">To mark a page as first/last in a document, write <b>\"ARQ\"</b> at the top/bottom
+    \n\nUsage:\n
+        #Title# for titles\n
+        @1.5.19@ for dates\n
+        *DAST* from topics</string>
+</resources>
